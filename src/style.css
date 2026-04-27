@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background:
+    linear-gradient(180deg, #0b1020 0%, #111827 100%);
+  color: white;
+}
+
+#app {
+  width: 100%;
+}
+
+.container {
+  width: min(760px, 92%);
+  margin: 40px auto;
+}
+
+h1 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #f8fafc;
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.35);
+}
+
+/* 上部エリア */
+.top-buttons {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(12px);
+}
+
+.top-buttons::before {
+  content: "▼ クイック追加";
+  display: block;
+  margin-bottom: 16px;
+  color: #93c5fd;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.top-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+#addBtn {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.preset {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* カード */
+#timerList::before {
+  content: "▼ 稼働中タイマー";
+  display: block;
+  margin-bottom: 14px;
+  color: #93c5fd;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 0 0 16px;
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.restart {
+  background: #16a34a;
+  color: white;
+}
+
+.edit {
+  background: #2563eb;
+  color: white;
+}
+
+.danger {
+  background: #dc2626;
+  color: white;
+}
+
+.save {
+  background: #16a34a;
+  color: white;
+}
+
+.cancel {
+  background: #6b7280;
+  color: white;
+}
+
+/* フォーム */
+.edit-box {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.edit-box select,
+.edit-box input {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  background: #0f172a;
+  color: white;
+}
+
+/* 完了 */
+.finished {
+  border: 1px solid #22c55e;
+  box-shadow: 0 0 24px rgba(34,197,94,0.35);
+  animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1); }
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .top-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.ad-space {
+  margin-top: 24px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.favorites {
+  margin-bottom: 16px;
+}
+
+.favorites h3 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #93c5fd;
+}
+
+.preset-fav {
+  margin: 4px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 13px;
+}
+
+.fav-item {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.fav-remove {
+  background: #dc2626;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
