@@ -4,6 +4,8 @@ const app = document.querySelector('#app');
 
 let editingId = null;
 let adding = false;
+let isPrivacyOpen = false;
+let isAboutOpen = false;
 
 // data
 let timers = JSON.parse(localStorage.getItem('timers')) || [];
@@ -180,6 +182,13 @@ function cancelAdd() {
 // render
 // --------------------
 function render() {
+  const windowScrollY = window.scrollY;
+
+  const policyContentEl = document.querySelector(".policy-card");
+  const policyScrollTop = policyContentEl ? policyContentEl.scrollTop : 0;
+  const aboutContentEl = document.querySelector(".about-card");
+  const aboutScrollTop = aboutContentEl ? aboutContentEl.scrollTop : 0;
+
   app.innerHTML = `
     <div class="container">
       <h1>FF14 Life Helper</h1>
@@ -305,6 +314,135 @@ function render() {
           })
           .join('')}
       </div>
+      <div class="ad-section">
+        <div class="ad-label">スポンサーリンク</div>
+        <div class="ad-box">
+          AdSense広告エリア（準備中）
+        </div>
+      </div>
+
+      <section class="update-log">
+        <h3 class="section-title">Update Log</h3>
+
+        <div class="log-list">
+          <div class="log-item">
+            <span class="log-date">2026/04/28</span>
+            <span class="log-text">Privacy Policy追加</span>
+          </div>
+
+          <div class="log-item">
+            <span class="log-date">2026/04/28</span>
+            <span class="log-text">Aboutページ追加</span>
+          </div>
+
+          <div class="log-item">
+            <span class="log-date">2026/04/27</span>
+            <span class="log-text">タイマー機能改善 / UI改善</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <button id="aboutBtn" class="footer-link">
+          About
+        </button>
+        <span class="footer-divider">｜</span>
+        <button id="privacyBtn" class="footer-link">
+          Privacy Policy
+        </button>
+      </footer>
+
+      <div id="privacyModal" class="modal ${isPrivacyOpen ? "" : "hidden"}">
+        <div class="modal-card policy-card">
+          <button id="closePrivacy" class="modal-close">×</button>
+
+          <h2>Privacy Policy</h2>
+
+          <div class="policy-content">
+            <p><strong>制定日：</strong>2026年4月28日</p>
+
+            <p>
+              本プライバシーポリシーは、「FF14 Life Helper」（以下「当サービス」といいます）が提供する
+              Webサイト・アプリ・関連サービスにおける、ユーザー情報および利用情報の取り扱いについて定めるものです。
+            </p>
+
+            <h3>第1条（収集する情報）</h3>
+            <p>
+              お問い合わせ時にユーザーが任意で入力する情報（メールアドレス・問い合わせ内容等）、
+              Cookie、アクセス情報、利用状況データを収集する場合があります。
+            </p>
+
+            <h3>第2条（利用目的）</h3>
+            <p>
+              サービス提供、改善、サポート対応、不正利用防止、広告配信、アクセス解析のために利用します。
+            </p>
+
+            <h3>第3条（広告について）</h3>
+            <p>
+              当サービスは第三者配信広告（Google AdSense等）を利用する場合があります。
+              Cookieを利用して興味に応じた広告を表示する場合があります。
+            </p>
+
+            <h3>第4条（アクセス解析）</h3>
+            <p>Google Analytics等を利用する場合があります。</p>
+
+            <h3>第5条（ローカル保存）</h3>
+            <p>
+              ユーザーが追加したタイマー設定やお気に入り情報を、
+              ブラウザのローカルストレージへ保存する場合があります。
+            </p>
+
+            <h3>第6条（著作権）</h3>
+            <p>
+              「ファイナルファンタジーXIV」 © SQUARE ENIX<br>
+              当サービスは非公式ファン制作ツールであり、
+              株式会社スクウェア・エニックスとは一切関係ありません。
+            </p>
+
+            <h3>第7条（お問い合わせ）</h3>
+            <p>ff14lifehelper@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="aboutModal" class="modal ${isAboutOpen ? "" : "hidden"}">
+        <div class="modal-card about-card">
+          <button id="closeAbout" class="modal-close">×</button>
+
+          <h2>About FF14 Life Helper</h2>
+
+          <div class="policy-content">
+            <p>
+              FF14 Life Helper は、ファイナルファンタジーXIV向けの
+              非公式ライフサポートツールです。
+            </p>
+
+            <p>
+              リテイナー帰還、畑管理、チョコボ厩舎など、
+              日常的な管理を少し便利にする目的で制作しています。
+            </p>
+
+            <p>
+              今後の追加予定：
+            </p>
+
+            <ul>
+              <li>通知音機能</li>
+              <li>タイマー並び替え</li>
+              <li>プリセット追加</li>
+              <li>UI改善</li>
+            </ul>
+
+            <p>
+              Contact：ff14lifehelper@gmail.com
+            </p>
+
+            <p>
+              非公式ファン制作ツール / © SQUARE ENIX
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   `;
 
@@ -355,6 +493,61 @@ function render() {
 
   document.querySelectorAll('.cancel').forEach(btn => {
     btn.onclick = cancelEdit;
+  });
+
+  document.getElementById("privacyBtn")?.addEventListener("click", () => {
+    isPrivacyOpen = true;
+    render();
+  });
+
+  document.getElementById("closePrivacy")?.addEventListener("click", () => {
+    isPrivacyOpen = false;
+    render();
+  });
+
+  const privacyModal = document.getElementById("privacyModal");
+  const policyCard = document.querySelector(".policy-card");
+  const newAboutCard = document.querySelector(".about-card");
+  if (newAboutCard) {
+    newAboutCard.scrollTop = aboutScrollTop;
+  } 
+
+  privacyModal?.addEventListener("click", () => {
+    isPrivacyOpen = false;
+    render();
+  });
+
+  policyCard?.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+    window.scrollTo(0, windowScrollY);
+
+  const newPolicyCard = document.querySelector(".policy-card");
+    if (newPolicyCard) {
+      newPolicyCard.scrollTop = policyScrollTop;
+  }
+
+  document.getElementById("aboutBtn")?.addEventListener("click", () => {
+    isAboutOpen = true;
+    render();
+  });
+
+  document.getElementById("closeAbout")?.addEventListener("click", () => {
+    isAboutOpen = false;
+    render();
+  });
+
+  const aboutModal = document.getElementById("aboutModal");
+  const aboutCard = document.querySelector(".about-card");
+
+  aboutModal?.addEventListener("click", () => {
+    isAboutOpen = false;
+    render();
+  });
+
+  aboutCard?.addEventListener("click", (e) => {
+    e.stopPropagation();
   });
 }
 
