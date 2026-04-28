@@ -321,6 +321,36 @@ function render() {
         </div>
       </div>
 
+      <section class="howto-section">
+        <h3 class="section-title">How to Use</h3>
+
+        <div class="howto-grid">
+          <div class="howto-card">
+            <div class="howto-number">①</div>
+            <h4>クイック追加</h4>
+            <p>よく使うタイマーをワンタップですぐ開始できます。</p>
+          </div>
+
+          <div class="howto-card">
+            <div class="howto-number">②</div>
+            <h4>カスタム追加</h4>
+            <p>自由な名前と時間で、自分専用タイマーを作れます。</p>
+          </div>
+
+          <div class="howto-card">
+            <div class="howto-number">③</div>
+            <h4>お気に入り登録</h4>
+            <p>よく使うタイマー設定を保存してすぐ呼び出せます。</p>
+          </div>
+
+          <div class="howto-card">
+            <div class="howto-number">④</div>
+            <h4>残り時間通知</h4>
+            <p>終了時に光って知らせるので見逃しにくいです。</p>
+          </div>
+        </div>
+      </section>
+
       <section class="update-log">
         <h3 class="section-title">Update Log</h3>
 
