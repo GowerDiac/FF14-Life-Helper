@@ -1,239 +1,70 @@
-* {
-  box-sizing: border-box;
+body{
+  margin:0;
+  background:#0f172a;
+  color:white;
+  font-family:sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background:
-    linear-gradient(180deg, #0b1020 0%, #111827 100%);
-  color: white;
+.home{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+  text-align:center;
 }
 
-#app {
-  width: 100%;
+h1{
+  font-size:42px;
+  margin-bottom:10px;
 }
 
-.container {
-  width: min(760px, 92%);
-  margin: 40px auto;
+.subtitle{
+  color:#94a3b8;
+  margin-bottom:50px;
 }
 
-h1 {
-  margin: 0 0 24px;
-  text-align: center;
-  font-size: 34px;
-  font-weight: 800;
-  color: #f8fafc;
-  text-shadow: 0 0 20px rgba(96, 165, 250, 0.35);
+.tool-grid{
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 }
 
-/* 上部エリア */
-.top-buttons {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 24px;
-  backdrop-filter: blur(12px);
+.tool-card{
+  display:block;
+  text-decoration:none;
+  color:white;
+  background:#1e293b;
+  border-radius:20px;
+  padding:35px;
+  transition:.2s;
 }
 
-.top-buttons::before {
-  content: "▼ クイック追加";
+.tool-card:hover{
+  transform:translateY(-5px);
+  background:#334155;
+}
+
+.icon{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.soon{
+  opacity:.55;
+  pointer-events:none;
+}
+
+.locked {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+  position: relative;
+}
+
+.soon-label {
   display: block;
-  margin-bottom: 16px;
-  color: #93c5fd;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.top-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-button {
-  border: none;
-  border-radius: 14px;
-  padding: 14px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-button:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.08);
-}
-
-#addBtn {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  color: white;
-}
-
-.preset {
-  background: rgba(255,255,255,0.08);
-  color: white;
-}
-
-/* カード */
-#timerList::before {
-  content: "▼ 稼働中タイマー";
-  display: block;
-  margin-bottom: 14px;
-  color: #93c5fd;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
-  padding: 20px;
-  margin-bottom: 16px;
-  backdrop-filter: blur(10px);
-}
-
-.card h2 {
-  margin: 0 0 10px;
-  font-size: 22px;
-}
-
-.card p {
-  margin: 0 0 16px;
-  color: #cbd5e1;
-  font-size: 16px;
-}
-
-.buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.restart {
-  background: #16a34a;
-  color: white;
-}
-
-.edit {
-  background: #2563eb;
-  color: white;
-}
-
-.danger {
-  background: #dc2626;
-  color: white;
-}
-
-.save {
-  background: #16a34a;
-  color: white;
-}
-
-.cancel {
-  background: #6b7280;
-  color: white;
-}
-
-/* フォーム */
-.edit-box {
-  margin-top: 18px;
-  display: grid;
-  gap: 12px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.edit-box select,
-.edit-box input {
-  width: 100%;
-  border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 15px;
-  background: #0f172a;
-  color: white;
-}
-
-/* 完了 */
-.finished {
-  border: 1px solid #22c55e;
-  box-shadow: 0 0 24px rgba(34,197,94,0.35);
-  animation: pulse 1.4s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.01); }
-  100% { transform: scale(1); }
-}
-
-/* スマホ */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 28px;
-  }
-
-  .top-buttons {
-    grid-template-columns: 1fr;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  button {
-    width: 100%;
-  }
-}
-
-.ad-space {
-  margin-top: 24px;
-  padding: 20px;
-  text-align: center;
-  background: rgba(255,255,255,0.05);
-  border: 1px dashed rgba(255,255,255,0.2);
-  border-radius: 12px;
-  color: #94a3b8;
-  font-size: 14px;
-}
-
-.favorites {
-  margin-bottom: 16px;
-}
-
-.favorites h3 {
-  margin: 0 0 10px;
-  font-size: 14px;
-  color: #93c5fd;
-}
-
-.preset-fav {
-  margin: 4px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.08);
-  color: white;
-  font-size: 13px;
-}
-
-.fav-item {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-}
-
-.fav-remove {
-  background: #dc2626;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 8px;
+  margin-top: 8px;
   font-size: 12px;
+  color: #9ca3af;
 }
 
 .site-footer {
@@ -248,6 +79,11 @@ button:hover {
   font-size: 13px;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.footer-divider {
+  color: #7c91b5;
+  margin: 0 8px;
 }
 
 .modal.hidden {
@@ -297,105 +133,4 @@ button:hover {
 .policy-content h3 {
   margin-top: 18px;
   color: #fff;
-}
-
-.ad-section {
-  margin-top: 28px;
-}
-
-.ad-label {
-  font-size: 12px;
-  color: #9fb4d9;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.ad-box {
-  min-height: 110px;
-  border-radius: 18px;
-  border: 1px dashed rgba(255,255,255,.25);
-  background: rgba(255,255,255,.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #c9d7f3;
-  font-size: 14px;
-}
-
-.footer-divider {
-  color: #7c91b5;
-  margin: 0 8px;
-}
-
-.update-log {
-  margin-top: 28px;
-  padding: 18px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-}
-
-.section-title {
-  margin: 0 0 14px;
-  font-size: 18px;
-  color: #fff;
-}
-
-.log-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.log-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.log-date {
-  min-width: 95px;
-  color: #8fb7ff;
-  font-weight: 700;
-}
-
-.log-text {
-  color: #dbe7ff;
-}
-
-.howto-section {
-  margin-top: 28px;
-}
-
-.howto-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-}
-
-.howto-card {
-  padding: 18px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.08);
-}
-
-.howto-number {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.howto-card h4 {
-  margin: 0 0 8px;
-  color: #fff;
-  font-size: 16px;
-}
-
-.howto-card p {
-  margin: 0;
-  color: #dbe7ff;
-  line-height: 1.7;
-  font-size: 14px;
 }
