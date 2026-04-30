@@ -8,8 +8,7 @@ document.querySelector('#app').innerHTML = `
     </p>
 
     <div class="tool-grid">
-      <a href="/src/pages/timer/index.html" class="tool-card">
-        <div class="icon">⏰</div>
+      <a href="/timer" class="tool-card">        <div class="icon">⏰</div>
         <h2>ライフタイマー</h2>
         <p>
           リテイナー / 畑 / チョコボ厩舎
