@@ -259,42 +259,10 @@ button:hover {
   font-size: 14px;
 }
 
-.update-log {
-  margin-top: 28px;
-  padding: 18px;
-  border-radius: 18px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-}
-
 .section-title {
   margin: 0 0 14px;
   font-size: 18px;
   color: #fff;
-}
-
-.log-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.log-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.log-date {
-  min-width: 95px;
-  color: #8fb7ff;
-  font-weight: 700;
-}
-
-.log-text {
-  color: #dbe7ff;
 }
 
 .howto-section {
