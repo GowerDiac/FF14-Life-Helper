@@ -32,6 +32,12 @@ document.querySelector('#app').innerHTML = `
         <p>準備中</p>
       </div>
     </div>
+    <div class="ad-section">
+      <div class="ad-label">スポンサーリンク</div>
+      <div class="ad-box">
+        AdSense広告エリア（準備中）
+      </div>
+    </div>
     <footer class="site-footer">
       <button id="aboutBtn" class="footer-link">
         About
