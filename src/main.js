@@ -11,9 +11,13 @@ document.querySelector('#app').innerHTML = `
       <a href="/timer.html" class="tool-card">
         <div class="icon">⏰</div>
         <h2>ライフタイマー</h2>
-        <p>
-          リテイナー / 畑 / チョコボ厩舎
-        </p>
+        <p>リテイナー / 畑 / チョコボ厩舎</p>
+      </a>
+
+      <a href="/ishgard.html" class="tool-card">
+        <div class="icon">🏗️</div>
+        <h2>蒼天街在庫管理</h2>
+        <p>必要素材を自動計算</p>
       </a>
 
       <div class="tool-card soon">
