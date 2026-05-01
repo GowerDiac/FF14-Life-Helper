@@ -326,7 +326,7 @@ function updateCountdowns() {
 function render() {
   app.innerHTML = `
     <div class="container">
-      <a href="/">← ホームへ戻る</a>
+      <a href="/" class="back-btn">← ホームへ戻る</a>
       <h1>FF14 Life Helper</h1>
 
       <div class="sound-setting">

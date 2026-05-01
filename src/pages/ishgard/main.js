@@ -325,6 +325,12 @@ function render() {
         </section>
 
       </div>
+      <div class="ad-section">
+        <div class="ad-label">スポンサーリンク</div>
+        <div class="ad-box">
+          AdSense広告エリア（準備中）
+        </div>
+      </div>
     </div>
   `;
 

@@ -365,17 +365,15 @@ button:hover {
   opacity: 0.9;
 }
 
-.back-link {
+.back-btn {
   display: inline-block;
-  margin-bottom: 18px;
-  color: #93c5fd;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
   transition: .2s;
 }
 
-.back-link:hover {
-  color: white;
-  transform: translateX(-2px);
+.back-btn:hover {
+  background: rgba(255,255,255,.14);
 }
