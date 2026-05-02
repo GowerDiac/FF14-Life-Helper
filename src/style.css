@@ -163,20 +163,21 @@ h1{
   text-align: center;
 }
 
-.ad-box {
+.ad-box{
   width:100%;
-  min-height: 110px;
-  border-radius: 18px;
-  border: 1px dashed rgba(255,255,255,.18);
-  background: rgba(255,255,255,.03);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #c9d7f3;
-  font-size: 14px;
+  min-height:120px;
+  margin-top:40px;
+  padding:20px;
+  border-radius:18px;
+  border:1px dashed rgba(255,255,255,.18);
+  background:rgba(255,255,255,.03);
+  box-sizing:border-box;
+}
 
-  padding: 24px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+.adsbygoogle{
+  display:block !important;
+  width:100% !important;
+  min-height:90px;
 }
 
 .site-footer {

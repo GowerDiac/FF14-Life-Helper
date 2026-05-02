@@ -193,10 +193,10 @@ privacyCard?.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-requestAnimationFrame(() => {
+setTimeout(() => {
   try {
     (adsbygoogle = window.adsbygoogle || []).push({});
   } catch (e) {
     console.log(e);
   }
-});
+}, 300);

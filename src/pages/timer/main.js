@@ -653,13 +653,13 @@ function render() {
     });
 
   // AdSense描画
-  requestAnimationFrame(() => {
+  setTimeout(() => {
     try {
       (adsbygoogle = window.adsbygoogle || []).push({});
     } catch (e) {
       console.log(e);
     }
-  });
+  }, 300);
 }
 
 // auto render
