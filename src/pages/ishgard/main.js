@@ -252,14 +252,6 @@ function updateResult() {
 }
 
 function render() {
-  const result = recipes
-    .map(r => ({
-      ...r,
-      count: getCraftable(r),
-    }))
-    .filter(r => r.count > 0)
-    .sort((a, b) => b.count - a.count);
-
   app.innerHTML = `
     <div class="container">
       <a href="/" class="back-btn">← ホームへ戻る</a>
@@ -294,43 +286,20 @@ function render() {
           <div id="resultArea"></div>
         </section>
 
-          ${
-            result.length
-              ? `
-            <table class="result-table">
-              <thead>
-                <tr>
-                  <th>レシピ名</th>
-                  <th>職業</th>
-                  <th>作成可能</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${result
-                  .map(
-                    r => `
-                    <tr>
-                      <td>${r.name}</td>
-                      <td>${r.job}</td>
-                      <td>${r.count}</td>
-                    </tr>
-                  `
-                  )
-                  .join("")}
-              </tbody>
-            </table>
-          `
-              : `<p class="empty">作成可能なレシピはありません</p>`
-          }
-        </section>
-
       </div>
-      <div class="ad-section">
-        <div class="ad-label">スポンサーリンク</div>
-        <div class="ad-box">
-          AdSense広告エリア（準備中）
-        </div>
-      </div>
+      <div class="ad-box"></div>
+      <footer class="site-footer">
+        <p>
+          FINAL FANTASY XIV © SQUARE ENIX
+        </p>
+        <p>
+          当サイトは非公式のファン制作ツールであり、
+          株式会社スクウェア・エニックスとは関係ありません。
+        </p>
+        <p>
+          Contact：ff14lifehelper@gmail.com
+        </p>
+      </footer>
     </div>
   `;
 

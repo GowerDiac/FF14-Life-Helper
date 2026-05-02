@@ -504,12 +504,8 @@ function render() {
           })
           .join('')}
       </div>
-      <div class="ad-section">
-        <div class="ad-label">スポンサーリンク</div>
-        <div class="ad-box">
-          AdSense広告エリア（準備中）
-        </div>
-      </div>
+      
+      <div class="ad-box"></div>
 
       <section class="howto-section">
         <h3 class="section-title">How to Use</h3>
@@ -540,6 +536,18 @@ function render() {
           </div>
         </div>
       </section>
+      <footer class="site-footer">
+        <p>
+          FINAL FANTASY XIV © SQUARE ENIX
+        </p>
+        <p>
+          当サイトは非公式のファン制作ツールであり、
+          株式会社スクウェア・エニックスとは関係ありません。
+        </p>
+        <p>
+          Contact：ff14lifehelper@gmail.com
+        </p>
+      </footer>
     </div>
   `;
 

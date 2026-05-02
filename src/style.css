@@ -26,6 +26,7 @@ h1{
   display:grid;
   gap:24px;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  margin-bottom: 48px;
 }
 
 .tool-card{
@@ -68,8 +69,13 @@ h1{
 }
 
 .site-footer {
-  margin: 28px 0 10px;
+  margin-top: 56px;
+  padding: 28px 16px;
   text-align: center;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .footer-link {
@@ -135,8 +141,19 @@ h1{
   color: #fff;
 }
 
+.ad-space {
+  margin-top: 24px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
 .ad-section {
-  margin-top: 28px;
+  margin: 40px 0;
 }
 
 .ad-label {
@@ -149,11 +166,28 @@ h1{
 .ad-box {
   min-height: 110px;
   border-radius: 18px;
-  border: 1px dashed rgba(255,255,255,.25);
-  background: rgba(255,255,255,.04);
+  border: 1px dashed rgba(255,255,255,.18);
+  background: rgba(255,255,255,.03);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #c9d7f3;
   font-size: 14px;
+
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+}
+
+.site-footer {
+  margin-top: 36px;
+  padding: 24px 16px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.site-footer p {
+  margin: 4px 0;
 }

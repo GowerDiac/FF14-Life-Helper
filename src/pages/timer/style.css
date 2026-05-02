@@ -237,7 +237,9 @@ button:hover {
 }
 
 .ad-section {
-  margin-top: 28px;
+  margin: 48px 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.06);
 }
 
 .ad-label {
@@ -365,6 +367,14 @@ button:hover {
   opacity: 0.9;
 }
 
+.back-btn,
+.back-btn:visited,
+.back-btn:hover,
+.back-btn:active {
+  color: white;
+  text-decoration: none;
+}
+
 .back-btn {
   display: inline-block;
   margin-bottom: 20px;
@@ -376,4 +386,18 @@ button:hover {
 
 .back-btn:hover {
   background: rgba(255,255,255,.14);
+}
+
+.site-footer {
+  margin-top: 36px;
+  padding: 24px 16px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.site-footer p {
+  margin: 4px 0;
 }

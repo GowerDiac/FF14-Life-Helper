@@ -32,12 +32,7 @@ document.querySelector('#app').innerHTML = `
         <p>準備中</p>
       </div>
     </div>
-    <div class="ad-section">
-      <div class="ad-label">スポンサーリンク</div>
-      <div class="ad-box">
-        AdSense広告エリア（準備中）
-      </div>
-    </div>
+    <div class="ad-box"></div>
     <footer class="site-footer">
       <button id="aboutBtn" class="footer-link">
         About
@@ -46,6 +41,16 @@ document.querySelector('#app').innerHTML = `
       <button id="privacyBtn" class="footer-link">
         Privacy Policy
       </button>
+      <p>
+        FINAL FANTASY XIV © SQUARE ENIX
+      </p>
+      <p>
+        当サイトは非公式のファン制作ツールであり、
+        株式会社スクウェア・エニックスとは関係ありません。
+      </p>
+      <p>
+        Contact：ff14lifehelper@gmail.com
+      </p>
     </footer>
 
     <div id="privacyModal" class="modal hidden">
