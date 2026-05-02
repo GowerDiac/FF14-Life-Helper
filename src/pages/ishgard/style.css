@@ -227,6 +227,7 @@ h1 {
 }
 
 .ad-box {
+  width:100%;
   min-height: 120px;
   border-radius: 22px;
   border: 1px dashed rgba(255,255,255,.14);

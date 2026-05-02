@@ -653,9 +653,13 @@ function render() {
     });
 
   // AdSense描画
-  try {
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  } catch (e) {}
+  requestAnimationFrame(() => {
+    try {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (e) {
+      console.log(e);
+    }
+  });
 }
 
 // auto render
