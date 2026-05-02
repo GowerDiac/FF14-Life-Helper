@@ -273,7 +273,18 @@ function playNotificationSound() {
   }
 }
 
+let autoRenderPaused = false;
+
+function pauseAutoRender() {
+  autoRenderPaused = true;
+}
+
+function resumeAutoRender() {
+  autoRenderPaused = false;
+}
+
 function updateCountdowns() {
+  if (autoRenderPaused) return;
   let shouldRerender = false;
 
   document.querySelectorAll(".remain-time").forEach(el => {
