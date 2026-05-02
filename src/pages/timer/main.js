@@ -666,7 +666,8 @@ function render() {
   // AdSense描画
   setTimeout(() => {
     try {
-      (adsbygoogle = window.adsbygoogle || []).push({});
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push({});
     } catch (e) {
       console.log(e);
     }
