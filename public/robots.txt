@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ff14-life-helper.vercel.app/sitemap.xml
