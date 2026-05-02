@@ -287,7 +287,16 @@ function render() {
         </section>
 
       </div>
-      <div class="ad-box"></div>
+      <div class="ad-box">
+        <ins
+          class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-6816707587409913"
+          data-ad-slot="4617669955"
+          data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </div>
       <footer class="site-footer">
         <p>
           FINAL FANTASY XIV © SQUARE ENIX
@@ -326,7 +335,10 @@ function render() {
   };
 
   updateResult();
-  
+
+  if (window.adsbygoogle) {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  } 
 }
 
 render();

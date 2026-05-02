@@ -505,7 +505,16 @@ function render() {
           .join('')}
       </div>
       
-      <div class="ad-box"></div>
+      <div class="ad-box">
+        <ins
+          class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-6816707587409913"
+          data-ad-slot="4617669955"
+          data-ad-format="auto"
+          data-full-width-responsive="true">
+        </ins>
+      </div>
 
       <section class="howto-section">
         <h3 class="section-title">How to Use</h3>
@@ -642,6 +651,11 @@ function render() {
       el.addEventListener("pointerdown", pauseAutoRender);
       el.addEventListener("change", resumeAutoRender);
     });
+
+  // AdSense描画
+  try {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  } catch (e) {}
 }
 
 // auto render

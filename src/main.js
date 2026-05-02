@@ -32,7 +32,16 @@ document.querySelector('#app').innerHTML = `
         <p>準備中</p>
       </div>
     </div>
-    <div class="ad-box"></div>
+    <div class="ad-box">
+      <ins
+        class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-6816707587409913"
+        data-ad-slot="4617669955"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+      </ins>
+    </div>
     <footer class="site-footer">
       <button id="aboutBtn" class="footer-link">
         About
@@ -183,3 +192,5 @@ aboutCard?.addEventListener("click", (e) => {
 privacyCard?.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+(adsbygoogle = window.adsbygoogle || []).push({});
