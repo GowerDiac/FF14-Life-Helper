@@ -406,3 +406,14 @@ button:hover {
 .site-footer p {
   margin: 4px 0;
 }
+
+.time-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.time-inputs input {
+  width: 70px;
+}

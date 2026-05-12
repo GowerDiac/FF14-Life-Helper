@@ -95,7 +95,24 @@ function addPreset(name, minutes, category) {
 function addCustomTimer() {
   const category = document.querySelector('#add-category').value;
   const name = document.querySelector('#add-name').value.trim();
-  const minutes = Number(document.querySelector('#add-minutes').value);
+  const days = Number(
+    document.querySelector('#add-days').value
+  );
+
+  const hours = Number(
+    document.querySelector('#add-hours').value
+  );
+
+  const minutes = Number(
+    document.querySelector('#add-minutes').value
+  );
+
+  const totalSeconds =
+    (
+      days * 24 * 60 +
+      hours * 60 +
+      minutes
+    ) * 60;
 
   if (!name || !minutes) return;
 
@@ -103,8 +120,8 @@ function addCustomTimer() {
     id: Date.now(),
     category,
     name,
-    duration: minutes * 60,
-    endTime: Date.now() + minutes * 60 * 1000,
+    duration: totalSeconds,
+    endTime: Date.now() + totalSeconds * 1000,
   });
 
   adding = false;
@@ -148,9 +165,26 @@ function cancelEdit() {
 function saveEdit(id) {
   const category = document.querySelector(`#category-${id}`).value;
   const name = document.querySelector(`#name-${id}`).value.trim();
-  const minutes = Number(document.querySelector(`#minutes-${id}`).value);
+  const days = Number(
+    document.querySelector(`#days-${id}`).value
+  );
 
-  if (!name || !minutes) return;
+  const hours = Number(
+    document.querySelector(`#hours-${id}`).value
+  );
+
+  const minutes = Number(
+    document.querySelector(`#minutes-${id}`).value
+  );
+
+  const totalSeconds =
+    (
+      days * 24 * 60 +
+      hours * 60 +
+      minutes
+    ) * 60;
+
+  if (!name || totalSeconds <= 0) return;
 
   timers = timers.map(t =>
     t.id === id
@@ -158,8 +192,8 @@ function saveEdit(id) {
           ...t,
           category,
           name,
-          duration: minutes * 60,
-          endTime: Date.now() + minutes * 60 * 1000,
+          duration: totalSeconds,
+          endTime: Date.now() + totalSeconds * 1000,
         }
       : t
   );
@@ -409,7 +443,16 @@ function render() {
             </select>
 
             <input id="add-name" placeholder="名前" />
-            <input id="add-minutes" type="number" value="60" />
+            <div class="time-inputs">
+              <input id="add-days" type="number" min="0" value="0" />
+              <span>日</span>
+
+              <input id="add-hours" type="number" min="0" value="0" />
+              <span>時間</span>
+
+              <input id="add-minutes" type="number" min="0" value="0" />
+              <span>分</span>
+            </div>
 
             <div class="buttons">
               <button id="saveAdd">追加</button>
@@ -500,7 +543,31 @@ function render() {
                     </select>
 
                     <input id="name-${timer.id}" value="${timer.name}" />
-                    <input id="minutes-${timer.id}" type="number" value="${Math.floor(timer.duration / 60)}" />
+                    <div class="time-inputs">
+                      <input
+                        id="days-${timer.id}"
+                        type="number"
+                        min="0"
+                        value="${Math.floor(timer.duration / 86400)}"
+                      />
+                      <span>日</span>
+
+                      <input
+                        id="hours-${timer.id}"
+                        type="number"
+                        min="0"
+                        value="${Math.floor((timer.duration % 86400) / 3600)}"
+                      />
+                      <span>時間</span>
+
+                      <input
+                        id="minutes-${timer.id}"
+                        type="number"
+                        min="0"
+                        value="${Math.floor((timer.duration % 3600) / 60)}"
+                      />
+                      <span>分</span>
+                    </div>
 
                     <div class="buttons">
                       <button data-id="${timer.id}" class="save">保存</button>
