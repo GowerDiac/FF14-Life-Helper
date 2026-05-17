@@ -1,0 +1,149 @@
+body{
+  margin:0;
+  background:#0f172a;
+  color:white;
+  font-family:sans-serif;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px 80px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
+  transition: .2s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,.14);
+}
+
+h1{
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.desc{
+  color:#94a3b8;
+  margin-bottom:24px;
+}
+
+.post-btn{
+  display:inline-block;
+  padding:14px 20px;
+  border-radius:14px;
+  background:#3b82f6;
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.dc-tabs{
+  display:flex;
+  gap:12px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+
+.dc-btn{
+  border:none;
+  padding:12px 18px;
+  border-radius:14px;
+  background:#1e293b;
+  color:white;
+  cursor:pointer;
+  font-weight:700;
+  transition:.2s;
+}
+
+.dc-btn:hover{
+  background:#334155;
+}
+
+.dc-btn.active{
+  background:#3b82f6;
+}
+
+.world-tabs{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.world-btn{
+  border:none;
+  padding:10px 14px;
+  border-radius:12px;
+  background:#111827;
+  color:white;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.world-btn:hover{
+  background:#1e293b;
+}
+
+.world-btn.active{
+  background:#6366f1;
+}
+
+.poster-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fill,minmax(240px,1fr));
+  gap:20px;
+}
+
+.poster-image{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:18px;
+  background:#1e293b;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.poster-image:hover{
+  transform:scale(1.02);
+}
+
+.empty{
+  color:#94a3b8;
+}
+
+.image-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:999;
+}
+
+.modal-image{
+  max-width:90vw;
+  max-height:90vh;
+  border-radius:18px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.5);
+}
