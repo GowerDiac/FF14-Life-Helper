@@ -8,6 +8,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         timer: resolve(__dirname, "timer.html"),
         ishgard: resolve(__dirname, 'ishgard.html'),
+        board: resolve(__dirname, 'board.html'),
       },
     },
   },
