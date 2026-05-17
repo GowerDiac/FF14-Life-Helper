@@ -19,10 +19,7 @@ let openedImage = null;
 
 const posters = {
   Elemental: {
-    Aegis: [
-      "/posters/sample1.webp",
-      "/posters/sample2.webp",
-    ],
+    Aegis: [],
     Atomos: [],
     Carbuncle: [],
     Garuda: [],
