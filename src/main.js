@@ -20,6 +20,12 @@ document.querySelector('#app').innerHTML = `
         <p>必要素材を自動計算</p>
       </a>
 
+      <a href="/board.html" class="tool-card">
+        <div class="icon">🖼️</div>
+        <h2>掲示板</h2>
+        <p>DC別ポスター掲載</p>
+      </a>
+
       <div class="tool-card soon">
         <div class="icon">🌱</div>
         <h2>未定</h2>
