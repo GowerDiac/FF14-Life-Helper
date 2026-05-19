@@ -1,4 +1,4 @@
-import "./shop.css";
+import "./style.css";
 
 const app = document.querySelector("#app");
 
