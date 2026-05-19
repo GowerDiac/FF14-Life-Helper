@@ -26,11 +26,11 @@ document.querySelector('#app').innerHTML = `
         <p>DC別ポスター掲載</p>
       </a>
 
-      <div class="tool-card soon">
-        <div class="icon">🌱</div>
-        <h2>未定</h2>
-        <p>準備中</p>
-      </div>
+      <a href="/market.html" class="tool-card">
+        <div class="icon">📮</div>
+        <h2>ガウショップ</h2>
+        <p>個人ショップ</p>
+      </a>
     </div>
     <div class="ad-box">
       <ins

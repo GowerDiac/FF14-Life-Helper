@@ -44,9 +44,7 @@ const posters = {
     Anima: [],
     Asura: [],
     Chocobo: [],
-    Hades: [
-      "/posters/SummerFairy.png",
-    ],
+    Hades: [],
     Ixion: [],
     Masamune: [],
     Pandaemonium: [],
