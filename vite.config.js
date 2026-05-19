@@ -9,6 +9,7 @@ export default defineConfig({
         timer: resolve(__dirname, "timer.html"),
         ishgard: resolve(__dirname, 'ishgard.html'),
         board: resolve(__dirname, 'board.html'),
+        shop: resolve(__dirname, 'shop.html'),
       },
     },
   },
