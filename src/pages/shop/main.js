@@ -51,6 +51,14 @@ const items = [
     stock: "残り2個",
     desc: "潜水艦産の素材使用家具",
   },
+
+  {
+    category: "素材",
+    name: "オーク原木",
+    price: "250G",
+    stock: "在庫あり",
+    desc: "家具・装備品作成等に",
+  },
 ];
 
 function render() {
