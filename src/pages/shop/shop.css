@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  background:
+    linear-gradient(
+      180deg,
+      #141414,
+      #1b1b1b
+    );
+
+  color: #f5e6b8;
+
+  font-family:
+    "Segoe UI",
+    sans-serif;
+}
+
+.shop-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
+  transition: .2s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,.14);
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2a2417,
+      #1d1a12
+    );
+
+  border: 1px solid #5b4a2f;
+
+  border-radius: 12px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 0 20px rgba(0,0,0,0.5);
+}
+
+.shop-title-wrap h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.shop-world {
+  margin-top: 8px;
+  color: #d4b86a;
+}
+
+.shop-contact {
+  font-size: 18px;
+}
+
+.shop-description {
+  margin-top: 20px;
+
+  background: #211d15;
+
+  border: 1px solid #5b4a2f;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  line-height: 1.8;
+}
+
+.market-board {
+  margin-top: 28px;
+
+  border:
+    1px solid #5b4a2f;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.market-header {
+  display: grid;
+  grid-template-columns:
+    1fr
+    180px
+    140px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #6a5326,
+      #4d3e20
+    );
+
+  padding: 16px;
+
+  font-weight: bold;
+}
+
+.market-row {
+  display: grid;
+  grid-template-columns:
+    1fr
+    180px
+    140px;
+
+  align-items: center;
+
+  padding: 18px;
+
+  background: #262117;
+
+  border-top:
+    1px solid #40331f;
+
+  transition: 0.2s;
+}
+
+.market-row:hover {
+  background: #332a1c;
+}
+
+.item-category {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding:
+    4px 10px;
+
+  border-radius: 999px;
+
+  background: #7c612d;
+
+  font-size: 13px;
+}
+
+.item-main h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.item-desc {
+  margin-top: 8px;
+  color: #d2c08e;
+}
+
+.item-price {
+  font-size: 24px;
+  color: #ffe08a;
+  font-weight: bold;
+}
+
+.item-stock {
+  font-weight: bold;
+}
+
+.shop-footer {
+  margin-top: 40px;
+
+  text-align: center;
+
+  color: #c8b98d;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+
+  .market-header {
+    display: none;
+  }
+
+  .market-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .shop-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-price,
+  .item-stock {
+    font-size: 18px;
+  }
+}

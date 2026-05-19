@@ -26,7 +26,7 @@ document.querySelector('#app').innerHTML = `
         <p>DC別ポスター掲載</p>
       </a>
 
-      <a href="/market.html" class="tool-card">
+      <a href="/shop.html" class="tool-card">
         <div class="icon">📮</div>
         <h2>ガウショップ</h2>
         <p>個人ショップ</p>
