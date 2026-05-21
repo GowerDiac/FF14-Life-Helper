@@ -23,7 +23,7 @@ const posters = {
     Atomos: [],
     Carbuncle: [],
     Garuda: [],
-    Gungnir: [],
+    Gungnir: ["/posters/Backroom.png",],
     Kujata: [],
     Tonberry: [],
     Typhon: [],
