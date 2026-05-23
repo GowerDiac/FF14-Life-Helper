@@ -29,7 +29,7 @@ document.querySelector('#app').innerHTML = `
       <a href="/shop.html" class="tool-card">
         <div class="icon">📮</div>
         <h2>ガウショップ</h2>
-        <p>個人ショップ</p>
+        <p>個人ショップ-5/24🆕</p>
       </a>
     </div>
     <div class="ad-box">
