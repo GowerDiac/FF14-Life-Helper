@@ -53,6 +53,14 @@ const items = [
   },
 
   {
+    category: "家具",
+    name: "天之小祠",
+    price: "500,000G",
+    stock: "残り1個",
+    desc: "Gungnirでハウスシェアできる方限定",
+  },
+
+  {
     category: "素材",
     name: "オーク原木",
     price: "250G",
