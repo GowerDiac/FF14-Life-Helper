@@ -53,14 +53,6 @@ const items = [
   },
 
   {
-    category: "家具",
-    name: "ワイルドグラスガーデン",
-    price: "19500G",
-    stock: "残り2個",
-    desc: "無人島箱ガチャ庭具",
-  },
-
-  {
     category: "素材",
     name: "オーク原木",
     price: "250G",
