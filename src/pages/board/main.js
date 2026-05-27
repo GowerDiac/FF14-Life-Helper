@@ -26,7 +26,7 @@ const posters = {
     Gungnir: ["/posters/Backroom.png",],
     Kujata: [],
     Tonberry: [],
-    Typhon: ["/posters/IMG_2200 - ひかうTV.jpeg",],
+    Typhon: ["/posters/ひかうTV.jpeg",],
   },
 
   Gaia: {
